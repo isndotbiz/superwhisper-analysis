@@ -15,7 +15,7 @@ from pathlib import Path
 # Common locations:
 # macOS: "~/Documents/superwhisper/recordings"
 # Alternative: "~/Library/Application Support/SuperWhisper/recordings"
-RECORDINGS_PATH = "~/Documents/superwhisper/recordings"
+RECORDINGS_PATH = os.environ.get("SUPERWHISPER_RECORDINGS", "~/Documents/superwhisper/recordings")
 
 # Cache and output directories (relative to project root)
 CACHE_DIR = "./cache_meta_files"
